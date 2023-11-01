@@ -11,8 +11,10 @@ export class BufferPointsBox {
     this.model.scene.scene.add(this.box);
   }
   private getBox() {
-    const sg = new THREE.SphereGeometry(5, 10, 10, 10);
-    console.log(sg.getAttribute("position").array.length);
+    // const sg = new THREE.SphereGeometry(5, 10, 10, 10);
+    // const bm = new THREE.Mesh(sg,new THREE.MeshBasicMaterial({color:0x00c4c4}))
+    
+    // console.log(sg.getAttribute("position").array.length);
     const group = new THREE.Group();
     const geometry = new THREE.BufferGeometry();
     const partices = 50000;
@@ -51,7 +53,7 @@ export class BufferPointsBox {
     geometry.computeBoundingSphere();
     geometry.computeVertexNormals();
     const material = new THREE.PointsMaterial({
-      size: 0.02,
+      size: 0.015,
       vertexColors: true,
       transparent: true,
     });

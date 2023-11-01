@@ -7,9 +7,11 @@ export class Renderer {
     this.model = new Model();
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.model.box,
-      alpha: true,
+      // alpha: true,
     });
-    // this.renderer.setClearColor(0x101104);
+    this.renderer.setClearColor(0x333333, 1);
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.VSMShadowMap;
     this.renderer.setSize(this.model.sizes.width, this.model.sizes.height);
     this.renderer.setPixelRatio(this.model.sizes.pexeRatio);
   }

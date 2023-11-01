@@ -14,9 +14,9 @@ export class Camera {
       45,
       this.model.sizes.aspect,
       0.001,
-      1000
+      10000
     );
-    camera.position.set(2, 2, 2);
+    camera.position.set(0, 50, 50);
     camera.lookAt(new THREE.Vector3(0, 0, 0));
     return camera;
   }

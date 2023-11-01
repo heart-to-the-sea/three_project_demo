@@ -10,6 +10,7 @@ export class Controller {
       camera.camera,
       renderer.renderer.domElement
     );
+    // this.constroller.enableDamping = true; // 缓动
     this.renderer = renderer;
   }
   update() {

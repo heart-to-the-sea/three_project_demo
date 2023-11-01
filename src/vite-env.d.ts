@@ -8,3 +8,11 @@ declare module "*.fs" {
   const src: string;
   export default src;
 }
+
+module "oimo" {
+  export class World {
+    constructor(any);
+    step();
+    add(any);
+  }
+}
